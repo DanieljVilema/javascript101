@@ -10,15 +10,9 @@
  * // El contenido del elemento con id "main-title" será "Bienvenidos al sitio web"
  */
 
-const setTitle = (id, text) => {
-
-    let refTitle = document.getElementById(id);
-    if (refTitle) {
-        refTitle.textContent = text;
-    } else {
-        console.warn(`No se encontró un elemento con el ID "${id}".`);
-    }
-
+export function setTitle(id, title) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = title;
 }
 
 /**
@@ -66,4 +60,4 @@ const addRow = (data, idBodyTable) => {
     }
 }
 
-export { setTitle, addRow };
+export { addRow };
