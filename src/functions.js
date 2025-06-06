@@ -33,20 +33,19 @@ export function setTitle(id, title) {
  */
 
 const addRow = (data, idBodyTable) => {
-
     if (
         !data?.frameworkName?.trim() ||
         !data?.releaseDate?.trim() ||
         !data?.usersName?.trim() ||
         !data?.popularityPercentage?.trim()
-) {
+    ) {
         console.warn("El objeto 'data' no tiene las propiedades esperadas.");
         return;
     }
 
     let template = `
     <tr class="border-b border-blue-gray-100 bg-blue-gray-50">
-        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white py-2">${data.frameworkName}</td>
+        <td class="font-medium text-gray-900 whitespace-nowrap py-2">${data.frameworkName}</td>
         <td>${data.releaseDate}</td>
         <td>${data.usersName}</td>
         <td>${data.popularityPercentage}</td>
